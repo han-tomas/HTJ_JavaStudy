@@ -154,6 +154,8 @@
  *     데이터형 크기
  *     byte < short < int < long < float < double
  *            char                                 //실수 표현이 정수 표현보다 크다.
+ *            
+ *            
  */
 public class 변수 {
 
