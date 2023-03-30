@@ -98,7 +98,6 @@ public class 데이터형정리 {
 		 d ='A'; // 65.0
 		System.out.println(d);
 		
-
 	}
 
 }
