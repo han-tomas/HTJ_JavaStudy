@@ -6,10 +6,10 @@ public class 문제6 {
 		// TODO Auto-generated method stub
 		int num1=10, num2=10;   
 	       int a, b;   
-	       a = ++num1;
-	       b = num2++;
+	       a = ++num1; //11
+	       b = num2++; //10
 
-	       System.out.printf("%d, %d \n", b, num2);
+	       System.out.printf("%d, %d \n", b, num2); // 10,11
 
 
 	}
