@@ -185,13 +185,61 @@ public class 중첩반복문_2 {
 			System.out.println();
 		}
 		
-		System.out.println("=====");
+		System.out.println("=========");
 /*
  *         ★
  *        ★★★
  *       ★★★★★
  *      ★★★★★★★ 
+ *      -------------------
+ *        i    k    j    ==> i/k     i/j
+ *       줄수  공백   별표       k=4-i   j=2i-1
+ *        1    3    1
+ *        2    2    3
+ *        3    1    5
+ *        4    0    7
+ *        
  */
+		for(int i=1;i<=4;i++)
+		{
+			for(int k=1;k<=4-i;k++)
+			{
+				System.out.print(" ");
+			}
+			for(int j=1;j<=2*i-1;j++)
+			{
+				System.out.print("★");
+			}
+			System.out.println();
+		}
+		
+		System.out.println("=========");
+/*
+ *      ★★★★★★★
+ *       ★★★★★
+ *        ★★★
+ *         ★
+ *   -------------------
+ *        i    k    j    ==> i/k    i/j
+ *       줄수  공백   별표       k=4-i  j=2*i-1
+ *        4    0    7
+ *        3    1    5
+ *        2    2    3
+ *        1    3    1   
+ */ 
+		for(int i=4;i>=1;i--)
+		{
+			for(int k=1;k<=4-i;k++)
+			{
+				System.out.print(" ");
+			}
+			for(int j=1;j<=2*i-1;j++)
+			{
+				System.out.print("★");
+			}
+			System.out.println();
+		}
+	
 		
 		
 		
