@@ -1,16 +1,19 @@
 import java.util.Arrays;
-import java.util.Scanner;
-public class 메소드조립법_3_숫자야구 {
 /*
  *    1. 난수발생
- *    2. 사용자입력
+ *    2. 사용자입력  method1
  *    ----------
- *    3. 비교
- *    4. 힌트
+ *    3. 비교 
+ *    4. 힌트     method2
  *    ----------
- *    5. 종료여부
+ *    5. 종료여부  method3
  */
 
+import java.util.Scanner;
+public class 메소드조립법_3_숫자야구 {
+    static void method() {
+    	
+    }
 	public static void main(String[] args) {
 		int[] com = new int[3];
 		int[] user = new int[3];
