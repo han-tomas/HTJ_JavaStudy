@@ -30,7 +30,7 @@ public class NetworkMain extends JFrame implements ActionListener{
 		sp.setBounds(1550, 275, 300, 650);
 		
 		setLayout(null);
-		b1=new JButton("영화 랭킹");
+		b1=new JButton("홈");
 		b2=new JButton("검색");
 		b3=new JButton("영화 상세 정보");
 		b4=new JButton("영화 뉴스");
