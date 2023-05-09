@@ -50,7 +50,16 @@ public class ChatPanel extends JPanel implements ChatInterFace {
 		// 테이블
 		String[] col= {"아이디","이름","성별"};
 		String[][] row= new String[0][3];
-		model = new DefaultTableModel(row,col);
+		model = new DefaultTableModel(row,col) 
+		{
+			// 생성자 안에서 처리하는 클래스 => 익명의 클래스 : 상속없이 오버라이딩이 가능
+			@Override
+			public boolean isCellEditable(int row, int column) {
+				// TODO Auto-generated method stub
+				return false;
+			}
+			
+		};
 		table = new JTable(model);
 		JScrollPane js2 = new JScrollPane(table);
 		// 배치
@@ -64,6 +73,8 @@ public class ChatPanel extends JPanel implements ChatInterFace {
 		add(tf); add(box);
 		add(js2);
 		add(p);
+		b1.setEnabled(false); // 비활성화
+		b2.setEnabled(false); // 비활성화
 		//String[] data= {"hong","홍길동","남자"};
 		//model.addRow(data);
 		//이벤트

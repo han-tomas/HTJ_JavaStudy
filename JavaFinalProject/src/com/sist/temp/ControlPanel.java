@@ -8,8 +8,8 @@ public class ControlPanel extends JPanel {
 	ChatPanel cp = new ChatPanel();
 	FindPanel fp = new FindPanel();
 	RecommandPanel rp = new RecommandPanel();
-	HomePanel hp;
 	CardLayout card = new CardLayout();
+	HomePanel hp;
 	DetailPanel dp;
 	// 화면 이동
 	public ControlPanel()

@@ -5,29 +5,25 @@ import javax.swing.*;
 
 public class NewsCard extends JPanel{
 	JLabel titleLa;
-	JLabel contentTa;
-	JLabel authorLa,dateLa;
+	JTextPane contentTa;
+	JLabel dateLa;
 	public NewsCard()
 	{
 		setLayout(null);
-		titleLa = new JLabel();
-		contentTa = new JLabel();
-		dateLa = new JLabel();
-//		contentTa.setEnabled(false);
-//		authorLa = new JLabel("");
 		titleLa = new JLabel("");
-		contentTa = new JLabel("");
+		contentTa = new JTextPane();
+		contentTa.setEditable(false);
+		JScrollPane js = new JScrollPane(contentTa);
 		dateLa = new JLabel("");
 		
 		// 배치
-		titleLa.setBounds(10, 10, 730, 35);
-		contentTa.setBounds(10, 50, 730, 100);
-//		authorLa.setBounds(10, 155, 360, 35);
-		dateLa.setBounds(380, 155, 360, 15);
+		titleLa.setBounds(10, 10, 450, 35);
+		js.setBounds(10, 50, 750, 100);
+		dateLa.setBounds(470, 10, 200, 15);
 		
 		// 추가
 		add(titleLa);
-		add(contentTa);
+		add(js);
 		add(dateLa);
 	}
 }

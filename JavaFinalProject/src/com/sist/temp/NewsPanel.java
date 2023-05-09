@@ -26,7 +26,7 @@ public class NewsPanel extends JPanel implements ActionListener{
 			cards[i]=new NewsCard();
 		}
 		pan = new JPanel();
-		pan.setLayout(new GridLayout(5,1,5,50));
+		pan.setLayout(new GridLayout(5,1,5,5));
 		setLayout(null);
 		// 배치
 		tf.setBounds(10, 15, 250, 30);
@@ -39,6 +39,21 @@ public class NewsPanel extends JPanel implements ActionListener{
 		// 등록
 		tf.addActionListener(this);
 		b.addActionListener(this);
+		
+		newsPrint("뮤직");
+	}
+	public void newsPrint(String fd)
+	{
+		List<NewsVO> list = NaverNewsManager.newsSearchData(fd);
+		int i=0;
+		for(NewsVO vo : list)
+		{
+			cards[i].titleLa.setText(vo.getTitle());
+			cards[i].contentTa.setText(vo.getContent());
+			cards[i].dateLa.setText(vo.getDate());
+			pan.add(cards[i]);
+			i++;
+		}
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -53,16 +68,8 @@ public class NewsPanel extends JPanel implements ActionListener{
 				tf.requestFocus();
 				return;
 			}
-			List<NewsVO> list = NaverNewsManager.newsSearchData(fd);
-			int i=0;
-			for(NewsVO vo : list)
-			{
-				cards[i].titleLa.setText(vo.getTitle());
-				cards[i].contentTa.setText(vo.getContent());
-				cards[i].dateLa.setText(vo.getDate());
-				pan.add(cards[i]);
-				i++;
-			}
+			newsPrint(fd);
+			
 		}
 	}
 }
