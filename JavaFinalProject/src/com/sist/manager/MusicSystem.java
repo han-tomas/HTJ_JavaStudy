@@ -77,6 +77,19 @@ public class MusicSystem {
 		}
 		return mList;
 	}
+	public GenieMusicVO musicDetailDate(String title)
+	{
+		GenieMusicVO vo = new GenieMusicVO();
+		for(GenieMusicVO gvo:list)
+		{
+			if(gvo.getTitle().equals(title))
+			{
+				vo=gvo;
+				break;
+			}
+		}
+		return vo;
+	}
 	public static void main(String[] args) {
 		MusicSystem ms = new MusicSystem();
 		try

@@ -13,8 +13,8 @@ public class PosterCard extends JPanel {
 	public PosterCard(GenieMusicVO vo)
 	{
 		setLayout(null);
-		poLa.setBounds(5, 5, 150, 130);
-		tLa.setBounds(5, 130, 150, 20);
+		poLa.setBounds(5, 5, 150, 120);
+		tLa.setBounds(5, 125, 150, 30);
 		
 		add(poLa);
 		add(tLa);
@@ -22,7 +22,7 @@ public class PosterCard extends JPanel {
 		try
 		{
 			URL url = new URL("http:"+vo.getPoster());
-			Image img = ImageChange.getImage(new ImageIcon(url), 150, 130);
+			Image img = ImageChange.getImage(new ImageIcon(url), 150, 120);
 			poLa.setIcon(new ImageIcon(img));
 			tLa.setText(vo.getTitle());
 		}catch(Exception ex) {}
