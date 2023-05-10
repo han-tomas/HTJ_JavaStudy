@@ -12,6 +12,7 @@ public class ControlPanel extends JPanel {
 	DetailPanel dp;
 	BoardListPanel bp;
 	BoardInsertPanel ip;
+	BoardDetailPanel bdp;
 	// 화면 이동
 	public ControlPanel()
 	{
@@ -19,6 +20,7 @@ public class ControlPanel extends JPanel {
 		hp= new HomePanel(this);
 		bp= new BoardListPanel(this);
 		ip= new BoardInsertPanel(this);
+		bdp=new BoardDetailPanel(this);
 		setLayout(card);
 		add("home",hp);
 		add("news",np);
@@ -27,6 +29,7 @@ public class ControlPanel extends JPanel {
 		add("detail",dp);
 		add("board",bp);
 		add("insert",ip);
+		add("bdp",bdp);
 		
 		
 	}
